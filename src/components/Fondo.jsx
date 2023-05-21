@@ -1,3 +1,4 @@
 export function Fondo() {
-  return <div className="background"></div>;
+  console.log(1)
+  return (<div className="background"></div>)
 }
