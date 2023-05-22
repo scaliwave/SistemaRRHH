@@ -11,7 +11,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/" Component={Home} />
+        <Route path="/home" Component={Home} />
 
       </Routes>
     </BrowserRouter>
