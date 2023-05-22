@@ -1,13 +1,13 @@
 .login{
-    background-color: rgba(0,0,0,0.6);
     color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.6);
     width: 402px;
-    height: 518px; 
-    left: 10%; 
+    height: 523px; 
     border-radius: 20px ;
     position: relative;
-    top: 98px;
-    bottom: 170px;
-    text-align: center;
-    margin-left: 20%;
 }
