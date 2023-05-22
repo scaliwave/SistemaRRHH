@@ -1,10 +1,57 @@
 .login{
+    flex-direction: column;
+    display: flex;
     background-color: rgba(0,0,0,0.6);
     color: white;
-    height: 50vh;
+    height: 70vh;
     border-radius: 20px ;
     text-align: center;
-    margin-top: 10%;
+    margin-top: 5%;
     margin-right: 10%;
+    align-items: center;
     flex: 1;
+}
+
+.title{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5%;
+}
+.form{
+    font-weight: bold;
+}
+
+.for-label{
+    color: white;
+}
+.usuario{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+.form-control{
+    height: 30px;
+}
+.form-label{
+    margin-bottom: 3%;
+}
+.contra{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+
+}
+
+.boton{
+    margin-top: 5%;
+    background-color: #1537A6;
+    color: white;
+    width: 276px;
+    height: 56px;
+}
+
+.form p{
+    text-align: right;
 }

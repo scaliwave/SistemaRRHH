@@ -11,10 +11,10 @@
 }
 .trabajaAqui{
     background-color: rgba(0,0,0,0.6);
-    height: 50vh;
+    height: 70vh;
     border-radius: 20px;
-    margin-top: 10%;
-    margin-right: 10%;
+    margin-top: 5%;
+    margin-right: 5%;
     margin-left: 10%;
     flex: 2;
 }
@@ -22,7 +22,7 @@
     color: white;
     font-size: 40px;
     text-align: center;
-    padding-top: 10%;
+    padding-top: 15%;
 }
 .hr{
     border-color: #0F91FE;
