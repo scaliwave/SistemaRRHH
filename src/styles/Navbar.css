@@ -1,0 +1,18 @@
+.background-navbar{
+    background-color: rgba(0,0,0,0.6);  
+}
+.navbar1{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 25px;
+    margin-left: 8%;
+}
+.navbar2{
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    text-align: right;
+    margin-right: 3%;
+    
+}
