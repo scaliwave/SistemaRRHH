@@ -1,0 +1,30 @@
+.footer{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  background-color: rgba(0,0,0,0.6);
+  position: relative;
+  width: 100vw;
+  top: 22%;
+  
+}
+.texto1{
+  text-align: center;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+.texto2{
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-align: right;
+  margin-bottom: 10px;
+  margin-top: 5px;
+  margin-right: 5%;
+  margin-left: 75%
+}
