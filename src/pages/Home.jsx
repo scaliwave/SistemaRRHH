@@ -8,7 +8,7 @@ import "../styles/Home.css";
 export function Home() {
   return (
     <div className="home">
-      <div className="conatainerNavbar">
+      <div className="containerNavbar">
         <Navbar1 />
       </div>
       <div className="containerHome">
