@@ -4,38 +4,28 @@ export function Login() {
   return (
     <>
       <div className="login">
-        <form>
-          <div className="mb-3">
-            <label className="form-label">Email address</label>
+        <div className="title">
+          <h1>INGRESO EMPLEADO</h1>
+        </div>
+        <form className="form">
+          <div className="usuario">
+            <label className="form-label">usuario</label>
             <input
               type="email"
               className="form-control"
               id="exampleInputEmail1"
-              aria-describedby="emailHelp"
+              placeholder="Enter your email address"
             />
-            <div id="emailHelp" className="form-text">
-              Well never share your email with anyone else.
-            </div>
+            <div id="emailHelp" className="Email"></div>
           </div>
-          <div className="mb-3">
-            <label className="form-label">Password</label>
-            <input
-              type="password"
-              className="form-control"
-              id="exampleInputPassword1"
-            />
+          <div className="contra">
+            <label className="form-label">Contraseña</label>
+            <input type="password" className="form-control" placeholder="Enter your password" />
           </div>
-          <div className="mb-3 form-check">
-            <input
-              type="checkbox"
-              className="form-check-input"
-              id="exampleCheck1"
-            />
-            <label className="form-check-label">Check me out</label>
-          </div>
-          <button type="submit" className="btn btn-primary">
-            Submit
+          <button type="submit" className="boton">
+            Log In
           </button>
+          <p>Olvidaste tu contraseña?</p>
         </form>
       </div>
     </>
