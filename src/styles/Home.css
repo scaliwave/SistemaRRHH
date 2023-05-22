@@ -7,26 +7,12 @@
     object-fit: fill;  
 }
 
-.background-navbar{
-    background-color: rgba(0,0,0,0.6);  
-}
+.containerHome{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
 
-.navbar1{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    font-size: 25px;
-    margin-left: 8%;
 }
-.navbar2{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    text-align: right;
-    margin-right: 3%;
-    
-}
-
 .trabajaAqui{
     background-color: rgba(0,0,0,0.6);
     width: 780px;
@@ -55,9 +41,4 @@
     margin-left: 25%;
 }
 
-.containerHome{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 
-}
