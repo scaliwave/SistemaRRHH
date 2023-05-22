@@ -1,13 +1,56 @@
 .login{
     color: white;
     display: flex;
-    justify-content: center;
     align-items: center;
+    flex-direction: column;
     width: 100%;
     height: 100%;
     background-color: rgba(0,0,0,0.6);
     width: 402px;
     height: 523px; 
     border-radius: 20px ;
-    position: relative;
+}
+
+.title{
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5%;
+}
+.form{
+    font-weight: bold;
+}
+
+.for-label{
+    color: white;
+}
+.usuario{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+}
+.form-control{
+    height: 30px;
+}
+.form-label{
+    margin-bottom: 3%;
+}
+.contra{
+    display: flex;
+    flex-direction: column;
+    padding: 5%;
+
+}
+
+.boton{
+    margin-top: 5%;
+    background-color: #1537A6;
+    color: white;
+    width: 276px;
+    height: 56px;
+}
+
+.form p{
+    text-align: right;
 }

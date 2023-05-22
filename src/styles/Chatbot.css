@@ -1,0 +1,13 @@
+.chatbot{
+    display: inline-flex;
+    margin-left: 15%;
+
+
+
+}
+.mensaje{
+    padding: 10%;
+    padding-top: 28%;
+    color: white;
+
+}
