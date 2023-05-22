@@ -1,9 +1,11 @@
+import { Link } from "react-router-dom";
+
 export function TrabajaConNosotros() {
   return (
     <>
       <div className="trabajaAqui">
         <div>
-          <h1>Trabaja con nosotros</h1>
+          <Link to={"/"} id="option"><h1>Trabaja con nosotros</h1></Link>
           <hr className="hr" />
           <p>
             {" "}
