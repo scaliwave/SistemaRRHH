@@ -1,37 +1,53 @@
-.background{
-    width: 100%;
+
+.home{
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    gap: 2%;
+    width: 100%;
     position: fixed;
     background-image: url("../assets/background.jpg");
     background-size: cover;
+    background-position: center;
+}
+
+.containerNavbar{
+    display: flex;
+}
+
+.containerFooter{
+    display: flex;
+
 }
 
 .containerHome{
-    margin-top: 4%;
-    display: grid;
+    padding: 5%;
+    display: flex;
     grid-template-columns: 1fr 1fr;
-    margin-right: 5%;
 
 }
 .trabajaAqui{
     background-color: rgba(0,0,0,0.6);
     width: 780px;
     height: 523px; 
-    left: 10%; 
     border-radius: 20px ;
     position: relative;
-    top: 98px;
-    bottom: 170px;
 }
+
 .trabajaAqui h1{
     color: white;
     font-size: 40px;
     text-align: center;
-    padding-top: 15%;
+    padding-top: 30%;
 }
 .hr{
     border-color: #0F91FE;
-    width: 60%;
+    border-style: solid;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 20px;
+
+    
 }
 .trabajaAqui p{
     color: white;
