@@ -1,5 +1,8 @@
 .background-navbar{
     background-color: rgba(0,0,0,0.6);  
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 1%;
 }
 .navbar1{
     color: white;

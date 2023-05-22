@@ -4,13 +4,12 @@
     position: fixed;
     background-image: url("../assets/background.jpg");
     background-size: cover;
-    object-fit: fill;  
 }
 
 .containerHome{
+    margin-top: 4%;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
 
 }
 .trabajaAqui{
