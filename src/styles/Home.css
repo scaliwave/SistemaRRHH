@@ -27,7 +27,7 @@
     color: white;
     font-size: 40px;
     text-align: center;
-    padding-top: 30%;
+    padding-top: 15%;
 }
 .hr{
     border-color: #0F91FE;
@@ -39,6 +39,7 @@
     text-align: justify;
     width: 50%;
     margin-left: 25%;
+    font-weight: bold;
 }
 
 
