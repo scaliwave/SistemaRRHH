@@ -4,18 +4,30 @@
     grid-template-columns: 1fr 1fr;
     padding: 1%;
 }
-.navbar1{
+.navbar{
     color: white;
     text-decoration: none;
     font-weight: bold;
-    font-size: 25px;
-    margin-left: 8%;
+}
+.container{
+    display: flex;
+}
+.navbar1{
+    margin-top: 1%;
+    margin-bottom: 1%;
+    margin-left: 7%;
+    font-size: 130%;
+    flex: 1;
 }
 .navbar2{
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
+    margin-top: 1.5%;
+    margin-bottom: 1%;
+    margin-right: 2%;
+    flex: 1;
     text-align: right;
-    margin-right: 3%;
-    
+}
+.logo{
+    width: 4%;
+    height: auto;
+    margin-right: 2%;
 }
