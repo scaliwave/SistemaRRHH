@@ -11,3 +11,9 @@
     text-align: center;
     margin-left: 20%;
 }
+.texto{
+    margin-top: 10%;
+    font-size: 120%;
+    font-weight: bold;
+    background-color: aqua;
+}
