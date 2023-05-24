@@ -6,12 +6,14 @@ import "./index.css";
 
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { Home } from "./pages/Home";
+import { TrabajaConNosotros } from "./pages/TrabajaConNosotros";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <BrowserRouter>
       <Routes>
-        <Route path="/home" Component={Home} />
+        <Route path="/" Component={Home} />
+        <Route path="/trabajaconnostros" Component={<TrabajaConNosotros />} />
 
       </Routes>
     </BrowserRouter>
