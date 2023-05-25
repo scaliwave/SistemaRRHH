@@ -1,0 +1,20 @@
+.blokTitle{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.blockTitle h1{
+    font-weight: bold;
+    font-size: 40px;
+    text-align: center;
+
+}
+.blokTitle hr{
+    border-color: #E0E0E0;
+    border-style: solid;
+    border-radius: 20px;
+    width: 100%;
+}

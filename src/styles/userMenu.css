@@ -1,0 +1,67 @@
+.usermenuContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #C6C6C6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 90px 0 rgba(0, 0, 0, 0.1); 
+    padding: 10%;
+    width: 320px;
+    min-height: 340px;
+
+}
+#menu_hr h1{
+    font-size: 30px;
+    font-weight: bold;
+    color: #1537A6;
+}
+#menu_hr hr{
+    border-top: 1px solid #C6C6C6;
+
+}
+
+.userBtn{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+    margin: 10%;
+}
+.userbtn1{
+    
+    padding: 5%;
+    margin-top: 5%;
+    align-items: center;
+
+    background-color: #1537A6;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #1537A6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 90px 0 rgba(0, 0, 0, 0.1);
+    font-size: medium;
+}
+.userbtn1:hover{
+    background-color: black;
+    color: white;
+    
+
+}
+
+.userbtn2{
+    padding: 5%;
+    margin-top: 5%;
+    align-items: center;
+
+    background-color: #1537A6;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #1537A6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 90px 0 rgba(0, 0, 0, 0.1);
+    font-size: medium;
+}
+.userbtn2:hover{
+    background-color: black;
+    color: white;
+
+}

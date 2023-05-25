@@ -1,0 +1,30 @@
+.usercontainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    border: 1px solid #C6C6C6;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2), 0 25px 90px 0 rgba(0, 0, 0, 0.1); 
+    padding: 10%;
+    width: 320px;
+    height: 70px;
+    gap: 5%;
+}
+.userIcon{
+    width: 40px;
+    height: 40px;
+
+}
+
+.name_desc h3{
+    font-weight: bold;
+    font-size: 16px;
+    color: #333333;
+    text-align: center;
+
+}
+
+.name_desc p{
+    font-size: 14px;
+}

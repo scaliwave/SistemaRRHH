@@ -1,0 +1,37 @@
+.navbarGroup{
+    background-color: #1537A6;
+    max-height: 8%;
+    align-items: center;
+    display: flexbox;
+
+}
+
+.container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 5%;
+
+}
+
+.text1{
+    margin-left: 2%;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.text1:hover{
+    color: black;
+}
+
+.userNavbar{
+    margin-left: 65%;
+    margin-right: 10%;
+}
+
+.exit{
+    width: 50%;
+    height: 80%;
+}

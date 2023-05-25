@@ -4,11 +4,11 @@ export function Login() {
   return (
     <>
       <div className="login">
-        <div className="title">
+        <div className="titleLogin">
           <h1>INGRESO EMPLEADO</h1>
         </div>
-        <form className="form">
-          <div className="usuario">
+        <form className="formLogin">
+          <div className="userLogin">
             <label className="form-label">usuario</label>
             <input
               type="email"
@@ -18,11 +18,11 @@ export function Login() {
             />
             <div id="emailHelp" className="Email"></div>
           </div>
-          <div className="contra">
+          <div className="passLogin">
             <label className="form-label">Contraseña</label>
             <input type="password" className="form-control" placeholder="Enter your password" />
           </div>
-          <button type="submit" className="boton">
+          <button type="submit" className="botonLogin" onClick={(e)=>{console.log(e.target)}}>
             Log In
           </button>
           <p>Olvidaste tu contraseña?</p>

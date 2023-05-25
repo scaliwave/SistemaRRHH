@@ -7,28 +7,29 @@
     height: 100%;
     background-color: rgba(0,0,0,0.6);
     width: 402px;
-    height: 523px; 
+    height: 425px; 
     border-radius: 20px ;
 }
 
-.title{
+.titleLogin{
     color: white;
     font-size: 14px;
     font-weight: bold;
     text-align: center;
     padding: 5%;
 }
-.form{
+.formlogin{
     font-weight: bold;
 }
 
 .for-label{
     color: white;
 }
-.usuario{
+.userLogin{
     display: flex;
     flex-direction: column;
     padding: 5%;
+    font-weight: bold;
 }
 .form-control{
     height: 30px;
@@ -36,19 +37,26 @@
 .form-label{
     margin-bottom: 3%;
 }
-.contra{
+.passLogin{
     display: flex;
     flex-direction: column;
     padding: 5%;
+    font-weight: bold;
 
 }
 
-.boton{
+.botonLogin{
     margin-top: 5%;
     background-color: #1537A6;
     color: white;
     width: 276px;
     height: 56px;
+    border-color: #1537A6;
+    border-style: solid;
+
+}
+.botonLogin:hover{
+    background-color: black ;
 }
 
 .form p{
