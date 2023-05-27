@@ -6,7 +6,7 @@ export function TrabajaAqui() {
     <>
       <div className="trabajaAqui">
         <div>
-          <Link to={"/trabajaconnostros"} id="option"><h1>Trabaja con nosotros</h1></Link>
+          <Link to={"/trabajaconnosotros"} id="option"><h1>Trabaja con nosotros</h1></Link>
           <hr className="hr" />
           <p>
             {" "}
