@@ -35,6 +35,7 @@ export function Login() {
               className="form-control"
               id="exampleInputEmail1"
               placeholder="Enter your email address"
+              required 
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -42,7 +43,7 @@ export function Login() {
           </div>
           <div className="passLogin">
             <label className="form-label">Contraseña</label>
-            <input type="password" className="form-control" placeholder="Enter your password" value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input type="password" className="form-control" placeholder="Enter your password" required value={password} onChange={(e) => setPassword(e.target.value)}/>
           </div>
           <button type="submit" className="botonLogin">
             Log In
