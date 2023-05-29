@@ -1,7 +1,5 @@
 .adminContainer{
     display: flex;
-    flex-direction: column;
-    
 }
 .adminC1{
     display: flex;

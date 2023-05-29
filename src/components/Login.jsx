@@ -15,8 +15,10 @@ export function Login() {
 
       localStorage.setItem('token', response.data.token)
 
-      window.location.href = '/administrador'
+      window.location.href = "/administrador"
+      
     } catch (error) {
+      window.location.href = "/"
       console.error("Error al iniciar sesion:", error)
     }
   };

@@ -1,0 +1,17 @@
+.usuario{
+  border: 1px solid #000;
+  padding: 1%;
+  width: 50vw;
+  height: 30vh;
+  margin: 1%;
+}
+
+.campo{
+  margin: 10%;
+  display: flex;
+}
+
+.editar{
+  margin-left: 5%;
+  cursor: pointer;
+}

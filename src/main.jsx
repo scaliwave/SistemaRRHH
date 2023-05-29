@@ -10,6 +10,7 @@ import { TrabajaConNosotros } from "./pages/TrabajaConNosotros";
 import { Administrador } from "./pages/Administrador";
 
 import "./styles/backgroundmain.css";
+import { ListarUsuarios } from "./pages/Administrador.ListarUsuarios";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -18,6 +19,7 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route path="/" Component={Home} />
         <Route path="/trabajaconnosotros" Component={TrabajaConNosotros} />
         <Route path="/administrador" Component={Administrador} />
+        <Route path="/administrador/listar-usuarios" Component={ListarUsuarios} />
       </Routes>
     </BrowserRouter>
   </React.StrictMode>
