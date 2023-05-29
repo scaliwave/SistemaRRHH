@@ -25,7 +25,7 @@ export function Administrador() {
 
   return (
    <div>
-    <div className="background">
+    <div className="background2">
       <Navbar2></Navbar2>
       <div className="adminContainer">
         <div className="adminC1">

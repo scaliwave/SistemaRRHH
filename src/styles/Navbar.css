@@ -6,8 +6,13 @@
     text-decoration: none;
     font-weight: bold;
 }
+.navbar:hover{
+    color: #0F91FE;
+}
 .container{
     display: flex;
+    flex-direction: row;
+
 }
 .navbar1{
     margin-top: 1%;
