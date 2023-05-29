@@ -4,12 +4,13 @@ import { Navbar1 } from "../components/Navbar1";
 import { Footer } from "../components/Footer";
 
 import "../styles/Home.css";
+import "../styles/backgroundMain.css";
 
 export function Home() {
   return (
-    <div className="home">
+    <div className="background1">
       <div className="containerHome">
-        <div className="containerNavbar">
+        <div>
           <Navbar1 />
         </div>
         <div className="containerCenter">
