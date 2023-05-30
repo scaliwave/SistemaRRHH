@@ -1,7 +1,30 @@
+import { useState } from "react";
 import { Btn1 } from "../components/Btn1";
 import "../styles/consultaPostulacion.css";
+import { AiOutlineClose } from "react-icons/ai";
 
 export function ConsultaPostulacion() {
+
+  const [idPostulante, setIdPostulante] = useState('')
+  const [postulacion, setPostulacion] = useState(false)
+  const [mostrarRespuesta, setMostrarRespuesta] = useState(true)
+
+  const consultarPostulacion = (e) => {
+    setIdPostulante(e.target.value)
+  }
+
+  const mostrarDatos = (e) => {
+    e.preventDefault();
+    if (idPostulante.trim() !== ''){
+      setPostulacion(true)
+    }
+  };
+
+  const ocultarRespuesta = () => {
+    setMostrarRespuesta(false)
+  }
+
+  console.log(postulacion)
   return (
     <div className="consulta-postulacion">
       <div className="container-consulta">
@@ -10,14 +33,15 @@ export function ConsultaPostulacion() {
         </div>
         <div id="container-form">
           <form className="form-postulacion">
-            <input placeholder="Ingresa tu número de documento" />
-            <Btn1 name="Consultar" size={[100, 40]} />
+            <input placeholder="Ingresa tu número de documento" onChange={consultarPostulacion} value={idPostulante}/>
+            {/* <Btn1 name="Consultar" size={[100, 40]} /> */}
+            <button onClick={mostrarDatos}>Consultar</button>
           </form>
         </div>
       </div>
-      {/* respuesta de consulta*/}
+      {mostrarRespuesta && postulacion && idPostulante.trim() !== '' && (
       <div className="container-respuesta">
-        <div>x</div>
+        <div className="closeDatosPostulante" onClick={ocultarRespuesta}><AiOutlineClose style={{color: "#1537A6", cursor: "pointer"}}></AiOutlineClose></div>
         <div className="content-fields">
           <div id="text-field">
             <h3>Documento de identidad: </h3>
@@ -41,6 +65,7 @@ export function ConsultaPostulacion() {
           <Btn1 name="Adjuntar documentos" size={[140, 25]} />
         </div>
       </div>
+      )}
     </div>
   );
 }
