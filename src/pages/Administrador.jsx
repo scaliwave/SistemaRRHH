@@ -1,6 +1,5 @@
 import "../styles/backgroundMain.css";
 import "../styles/admin.css";
-import axios from "axios";
 
 import { BloqueTitulo } from "../components/BloqueTitulo";
 import { Navbar2 } from "../components/Navbar2";
@@ -22,10 +21,12 @@ export function Administrador() {
       setAuthenticated(true)
     }
   }, []);
+
   const name = "Ligia López";
   const rol = "Administrador";
   return (
    <div>
+    {authenticated && (
     <div className="background2">
       <Navbar2></Navbar2>
       <div className="adminContainer">
@@ -42,6 +43,7 @@ export function Administrador() {
         </div>
       </div>
     </div>
+    )}
    </div>
   );
 }
