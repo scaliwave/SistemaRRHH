@@ -1,0 +1,13 @@
+.container-list-users{
+    display: flex;
+    flex-direction: row;
+    gap: 5%;
+    
+}
+.adminC1{
+    display: flex;
+    flex-direction: column;
+    width: 60px;
+    height: 100%;
+    
+}

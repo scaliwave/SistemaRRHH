@@ -6,12 +6,19 @@ export function VerticalBar() {
   return (
     <div className="vertical">
       <div className="verticalGroup">
-        <Link to="#">
-          <img src="/list.png" className="listIcon"/>
-        </Link>
-        <Link to="/administrador/listar-usuarios">
-          <FaUserAlt className="listIcon" style={{color: 'black'}}></FaUserAlt>  
-        </Link>
+        <div>
+          <Link to="#">
+            <img src="/list.png" className="listIcon" />
+          </Link>
+        </div>
+        <div>
+          <Link to="/administrador/listar-usuarios">
+            <FaUserAlt
+              className="listIcon"
+              style={{ color: "black" }}
+            ></FaUserAlt>
+          </Link>
+        </div>
       </div>
     </div>
   );

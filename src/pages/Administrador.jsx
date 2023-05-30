@@ -22,10 +22,10 @@ export function Administrador() {
       setAuthenticated(true)
     }
   }, []);
-
+  const name = "Ligia López";
+  const rol = "Administrador";
   return (
    <div>
-    {authenticated && (
     <div className="background2">
       <Navbar2></Navbar2>
       <div className="adminContainer">
@@ -38,12 +38,10 @@ export function Administrador() {
             <div>
               <UserBlock name={"Ligia López"} rol={"Administrador"}></UserBlock>
             </div>
-            <div><UserMenu></UserMenu></div>
           </div>
         </div>
       </div>
     </div>
-    )}
    </div>
   );
 }
