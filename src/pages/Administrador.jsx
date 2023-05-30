@@ -9,24 +9,21 @@ import { UserMenu } from "../components/UserMenu";
 import { useEffect, useState } from "react";
 
 export function Administrador() {
-  
-  const [authenticated, setAuthenticated] = useState(false);
+  // const [authenticated, setAuthenticated] = useState(false);
 
-  useEffect(() => {
-    const token = localStorage.getItem('token');
+  // useEffect(() => {
+  //   const token = localStorage.getItem("token");
 
-    if (!token) {
-      window.location.href = "/"
-    } else {
-      setAuthenticated(true)
-    }
-  }, []);
-
+  //   if (!token) {
+  //     window.location.href = "/";
+  //   } else {
+  //     setAuthenticated(true);
+  //   }
+  // }, []);
   const name = "Ligia López";
   const rol = "Administrador";
   return (
    <div>
-    {authenticated && (
     <div className="background2">
       <Navbar2></Navbar2>
       <div className="adminContainer">
@@ -41,9 +38,8 @@ export function Administrador() {
             </div>
           </div>
         </div>
-      </div>
+      {/* )} */}
     </div>
-    )}
    </div>
   );
 }

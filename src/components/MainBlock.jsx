@@ -4,7 +4,7 @@ import "../styles/Usuario.css";
 import { CampoDeTexto } from "./CampoDeTexto";
 import { Btn1 } from "./Btn1";
 import { Container, Row, Col } from "react-grid-system";
-import { useState } from "react";
+import { BuscarEmpleado } from "./BuscarEmpleado";
 
 export function MainBlock() {
 
@@ -20,6 +20,7 @@ export function MainBlock() {
   if (window.location.pathname === "/administrador/listar-usuarios") {
     return (
       <div className="main-content-users">
+        <BuscarEmpleado />
         <div className="main-block">
           <div id="title">
             <h1>Usuarios</h1>
@@ -73,23 +74,19 @@ export function MainBlock() {
           <div id="content-add-user">
             <div>
               <h4>Documento de identidad</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" value={id} onChange={(e) => setId(e.target.value)}/>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div>
               <h4>Nombre completo</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div>
               <h4>Cargo</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" value={cargo} onChange={(e) => setCargo(e.target.value)}/>
-            </div>
-            <div>
-              <h4>Usuario</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" value={usuario} onChange={(e) => setUsuario(e.target.value)}/>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div>
               <h4>Contraseña</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" value={contraseña} onChange={(e) => setContraseña(e.target.value)}/>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div id="btn-add-user">
               <Btn1 name="Agregar" size={[100, 30]} />

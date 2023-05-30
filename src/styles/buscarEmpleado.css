@@ -1,0 +1,19 @@
+.content-buscar-empleado{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+    width: 400px;
+    height: 160px;
+    align-items: center;
+    padding: 1%;
+    margin-top: 10%;
+}
+
+#content-buscar{
+    display: flex;
+}
+#content-buscar input{
+    background-color:#F4F4F4;
+}
