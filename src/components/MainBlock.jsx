@@ -4,6 +4,7 @@ import "../styles/Usuario.css";
 import { CampoDeTexto } from "./CampoDeTexto";
 import { Btn1 } from "./Btn1";
 import { Container, Row, Col } from "react-grid-system";
+import { BuscarEmpleado } from "./BuscarEmpleado";
 
 export function MainBlock() {
   const name = "Sofia Morales";
@@ -12,6 +13,7 @@ export function MainBlock() {
   if (window.location.pathname === "/administrador/listar-usuarios") {
     return (
       <div className="main-content-users">
+        <BuscarEmpleado />
         <div className="main-block">
           <div id="title">
             <h1>Usuarios</h1>
@@ -65,19 +67,39 @@ export function MainBlock() {
           <div id="content-add-user">
             <div>
               <h4>Documento de identidad</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+              <input
+                type="text"
+                name=""
+                id="in-add-user"
+                placeholder="Input Field"
+              />
             </div>
             <div>
               <h4>Nombre completo</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+              <input
+                type="text"
+                name=""
+                id="in-add-user"
+                placeholder="Input Field"
+              />
             </div>
             <div>
               <h4>Cargo</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+              <input
+                type="text"
+                name=""
+                id="in-add-user"
+                placeholder="Input Field"
+              />
             </div>
             <div>
               <h4>Contraseña</h4>
-              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+              <input
+                type="text"
+                name=""
+                id="in-add-user"
+                placeholder="Input Field"
+              />
             </div>
             <div id="btn-add-user">
               <Btn1 name="Agregar" size={[100, 30]} />

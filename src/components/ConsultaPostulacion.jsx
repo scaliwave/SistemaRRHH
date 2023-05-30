@@ -32,10 +32,10 @@ export function ConsultaPostulacion() {
           <h2>Consulta tu postulación</h2>
         </div>
         <div id="container-form">
-          <form className="form-postulacion">
+          <form className="form-postulacion" onSubmit={mostrarDatos}>
             <input placeholder="Ingresa tu número de documento" onChange={consultarPostulacion} value={idPostulante}/>
             {/* <Btn1 name="Consultar" size={[100, 40]} /> */}
-            <button onClick={mostrarDatos}>Consultar</button>
+            <Btn1 name="Consultar" size={[100,40,]} />
           </form>
         </div>
       </div>
