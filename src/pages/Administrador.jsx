@@ -22,26 +22,29 @@ export function Administrador() {
       setAuthenticated(true)
     }
   }, []);*/
-
+  const name = "Ligia López";
+  const rol = "Administrador";
   return (
-   <div>
-    <div className="background2">
-      <Navbar2></Navbar2>
-      <div className="adminContainer">
-        <div className="adminC1">
-          <VerticalBar></VerticalBar>
-        </div>
-        <div className="adminC2">
-          <BloqueTitulo></BloqueTitulo> 
-          <div className="adminC2_1">
-            <div>
-              <UserBlock name={"Ligia López"} rol={"Administrador"}></UserBlock>
+    <div>
+      <div className="background2">
+        <Navbar2></Navbar2>
+        <div className="adminContainer">
+          <div className="adminC1">
+            <VerticalBar></VerticalBar>
+          </div>
+          <div className="adminC2">
+            <BloqueTitulo></BloqueTitulo>
+            <div className="adminC2_1">
+              <div>
+                <UserBlock name={name} rol={rol}></UserBlock>
+              </div>
+              <div>
+                <UserMenu btns={["Usuarios", "Agregar usuario",]}/>
+              </div>
             </div>
-            <div><UserMenu></UserMenu></div>
           </div>
         </div>
       </div>
     </div>
-   </div>
   );
 }

@@ -1,15 +1,24 @@
-import { FondoUsuario } from "../components/FondoUsuario";
-import { Navbar2 } from "../components/Navbar2";
-import { Usuario } from "../components/Usuario";
-import { VerticalBar } from "../components/VerticalBar";
+import "../styles/backgroundMain.css";
+import "../styles/adminListarUsers.css";
 
-import "../styles/ListarUsuarios.css"
+// import { FondoUsuario } from "../components/FondoUsuario";
+import { Navbar2 } from "../components/Navbar2";
+import { VerticalBar } from "../components/VerticalBar";
+import { MainBlock } from "../components/MainBlock";
+
+import "../styles/ListarUsuarios.css";
 
 export function ListarUsuarios() {
   return (
-    <div className="listarUsuarios">
-      <Usuario></Usuario>
-      <Usuario></Usuario>
+    <div className="background2">
+      <Navbar2 />
+      <div className="container-list-users">
+        <div className="adminC1">
+          <VerticalBar />
+        </div>
+
+        <MainBlock />
+      </div>
     </div>
   );
 }
