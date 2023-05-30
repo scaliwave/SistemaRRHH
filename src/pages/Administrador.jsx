@@ -10,7 +10,7 @@ import { UserMenu } from "../components/UserMenu";
 import { useEffect, useState } from "react";
 
 export function Administrador() {
-  /*
+  
   const [authenticated, setAuthenticated] = useState(false);
 
   useEffect(() => {
@@ -21,10 +21,11 @@ export function Administrador() {
     } else {
       setAuthenticated(true)
     }
-  }, []);*/
+  }, []);
 
   return (
    <div>
+    {authenticated && (
     <div className="background2">
       <Navbar2></Navbar2>
       <div className="adminContainer">
@@ -42,6 +43,7 @@ export function Administrador() {
         </div>
       </div>
     </div>
+    )}
    </div>
   );
 }
