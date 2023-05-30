@@ -1,14 +1,9 @@
 import "../styles/backgroundMain.css";
-import "../styles/adminListarUsers.css";
-
-// import { FondoUsuario } from "../components/FondoUsuario";
 import { Navbar2 } from "../components/Navbar2";
 import { VerticalBar } from "../components/VerticalBar";
 import { MainBlock } from "../components/MainBlock";
 
-import "../styles/ListarUsuarios.css";
-
-export function ListarUsuarios() {
+export function AgregarUsuarios() {
   return (
     <div className="background2">
       <Navbar2 />

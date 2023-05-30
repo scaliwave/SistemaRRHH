@@ -12,7 +12,9 @@ export function UserMenu({ btns }) {
           <Link className="userbtn1" to="/administrador/listar-usuarios">
             {btn1}
           </Link>
-          <Link className="userbtn1" to="#">{btn2}</Link>
+          <Link className="userbtn1" to="/administrador/agregar-usuarios">
+            {btn2}
+          </Link>
         </div>
       );
       // } else if (window.location.pathname === "/") {

@@ -8,10 +8,11 @@ import { Container, Row, Col } from "react-grid-system";
 export function MainBlock() {
   const name = "Sofia Morales";
   const rol = "Auxiliar contable";
-  const content = () => {
-    if (window.location.pathname === "/administrador/listar-usuarios") {
-      return (
-        <div>
+  //screen 1
+  if (window.location.pathname === "/administrador/listar-usuarios") {
+    return (
+      <div className="main-content-users">
+        <div className="main-block">
           <div id="title">
             <h1>Usuarios</h1>
           </div>
@@ -20,7 +21,7 @@ export function MainBlock() {
               <Container>
                 <Row>
                   <Col>
-                    <h3 >{name}</h3>
+                    <h3>{name}</h3>
                   </Col>
                   <Col>
                     <CampoDeTexto />
@@ -50,9 +51,72 @@ export function MainBlock() {
             </div>
           </div>
         </div>
-      );
-    }
-  
-  };
-  return <div className="main-block">{content()}</div>;
+      </div>
+    );
+  }
+  //screen 2
+  else if (window.location.pathname === "/administrador/agregar-usuarios") {
+    return (
+      <div className="main-content-users">
+        <div className="Container-add-user">
+          <div id="title">
+            <h3>Agregar Usuario</h3>
+          </div>
+          <div id="content-add-user">
+            <div>
+              <h4>Documento de identidad</h4>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+            </div>
+            <div>
+              <h4>Nombre completo</h4>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+            </div>
+            <div>
+              <h4>Cargo</h4>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+            </div>
+            <div>
+              <h4>Contraseña</h4>
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
+            </div>
+            <div id="btn-add-user">
+              <Btn1 name="Agregar" size={[100, 30]} />
+            </div>
+          </div>
+        </div>
+
+        <div className="main-block">
+          <div id="title">
+            <h1>Usuarios</h1>
+          </div>
+          <div className="scrollEmployees">
+            <div className="usuario">
+              <Container>
+                <Row>
+                  <Col>
+                    <h3>{name}</h3>
+                  </Col>
+                  <Col>
+                    <CampoDeTexto />
+                  </Col>
+                  <Col>
+                    <CampoDeTexto />
+                  </Col>
+                </Row>
+                <Row>
+                  <Col>
+                    <p>{rol}</p>
+                  </Col>
+                  <Col>
+                    <CampoDeTexto />
+                  </Col>
+                  <Col />
+                </Row>
+              </Container>
+            </div>
+          </div>
+        </div>
+      </div>
+    );
+  }
 }
