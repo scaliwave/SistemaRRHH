@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/verticalBar.css";
-import { FaUserAlt } from "react-icons/fa";
+import { FaUserAlt, FaUserPlus } from "react-icons/fa";
 
 export function VerticalBar() {
   return (
@@ -17,6 +17,14 @@ export function VerticalBar() {
               className="listIcon"
               style={{ color: "black" }}
             ></FaUserAlt>
+          </Link>
+        </div>
+        <div>
+          <Link to="/administrador/agregar-usuarios">
+            <FaUserPlus
+              className="listIcon2"
+              style={{ color: "black" }}
+            ></FaUserPlus>
           </Link>
         </div>
       </div>
