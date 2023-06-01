@@ -13,9 +13,13 @@ export function Login() {
     try {
       const response = await axios.post('http://localhost:3000/api/login', {username, password});
 
-      localStorage.setItem('token', response.data.token)
-
-      window.location.href = "/administrador"
+      if (response.data.success) {
+        localStorage.setItem('token', response.data.token)
+        window.location.href = "/administrador"
+      } else {
+        setUsername('')
+        setPassword('')
+      }
       
     } catch (error) {
       window.location.href = "/"
