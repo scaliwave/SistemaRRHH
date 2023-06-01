@@ -25,28 +25,28 @@ export function Administrador() {
   return (
     <div>
       {/* {authenticated && ( */}
-        <div className="background2">
-          <Navbar2></Navbar2>
-          <div className="adminContainer">
-            <div className="adminC1">
-              <VerticalBar></VerticalBar>
-            </div>
-            <div className="adminC2">
-              <BloqueTitulo></BloqueTitulo>
-              <div className="adminC2_1">
-                <div>
-                  <UserBlock
-                    name={"Ligia López"}
-                    rol={"Administrador"}
-                  ></UserBlock>
-                </div>
-                <div>
-                  <UserMenu btns={["Usuarios", "Agregar usuario"]} />
-                </div>
+      <div className="background2">
+        <Navbar2></Navbar2>
+        <div className="adminContainer">
+          <div className="adminC1">
+            <VerticalBar></VerticalBar>
+          </div>
+          <div className="adminC2">
+            <BloqueTitulo></BloqueTitulo>
+            <div className="adminC2_1">
+              <div>
+                <UserBlock
+                  name={"Ligia López"}
+                  rol={"Administrador"}
+                ></UserBlock>
+              </div>
+              <div>
+                <UserMenu btns={["Usuarios", "Agregar usuario"]} />
               </div>
             </div>
           </div>
         </div>
+      </div>
       {/* )} */}
     </div>
   );

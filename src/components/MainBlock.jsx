@@ -9,6 +9,13 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 
 export function MainBlock() {
+
+  const [id, setId] = useState('');
+  const [nombre, setNombre] = useState('')
+  const [cargo, setCargo] = useState('')
+  const [usuario, setUsuario] = useState('')
+  const [contraseña, setContraseña] = useState('')
+
   const name = "Sofia Morales";
   const rol = "Auxiliar contable";
 
@@ -94,39 +101,19 @@ export function MainBlock() {
           <div id="content-add-user">
             <div>
               <h4>Documento de identidad</h4>
-              <input
-                type="text"
-                name=""
-                id="in-add-user"
-                placeholder="Input Field"
-              />
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div>
               <h4>Nombre completo</h4>
-              <input
-                type="text"
-                name=""
-                id="in-add-user"
-                placeholder="Input Field"
-              />
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div>
               <h4>Cargo</h4>
-              <input
-                type="text"
-                name=""
-                id="in-add-user"
-                placeholder="Input Field"
-              />
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div>
               <h4>Contraseña</h4>
-              <input
-                type="text"
-                name=""
-                id="in-add-user"
-                placeholder="Input Field"
-              />
+              <input type="text" name="" id="in-add-user" placeholder="Input Field" />
             </div>
             <div id="btn-add-user">
               <Btn1 name="Agregar" size={[100, 30]} />
