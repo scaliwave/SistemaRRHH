@@ -49,7 +49,7 @@ export function Navbar2() {
       <div className="container">
         {letter()}
         <p className="userNavbar">user</p>
-        <Link to="/" onClick={logout()}>
+        <Link to="/" onClick={logout}>
           <img src="/exit.png" className="exit" />
         </Link>
       </div>

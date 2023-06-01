@@ -3,7 +3,7 @@
   flex-direction: column;
   border: 1px solid #000;
   width: 50vw;
-  height: 30vh;
+  margin-bottom: 2%;
 }
 
 .campo{
@@ -14,4 +14,14 @@
 .editar{
   margin-left: 5%;
   cursor: pointer;
+}
+
+.row{
+  display: flex;
+}
+
+.col{
+  flex: 1;
+  margin: 5px;
+  height: 10vh;
 }

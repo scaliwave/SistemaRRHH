@@ -1,6 +1,5 @@
 import "../styles/backgroundMain.css";
 import "../styles/admin.css";
-import axios from "axios";
 
 import { BloqueTitulo } from "../components/BloqueTitulo";
 import { Navbar2 } from "../components/Navbar2";
