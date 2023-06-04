@@ -6,6 +6,7 @@ import { Btn1 } from "./Btn1";
 import { BuscarEmpleado } from "./BuscarEmpleado";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { AiOutlineClose } from "react-icons/ai";
 
 export function MainBlock() {
 
@@ -22,6 +23,8 @@ export function MainBlock() {
     if (window.location.pathname === "/administrador/listar-usuarios") {
       const [usuarios, setUsuarios] = useState([])
       const [width, setWidth] = useState(120)
+      const [buscar, setBuscar] = useState(false)
+      const [usuarioId, setUsuarioId] = useState('')
 
       const editarUsuario = (e, id) => {
         e.preventDefault()
@@ -52,6 +55,15 @@ export function MainBlock() {
           });
         });
       };
+
+      const mostrarUsuario = (mostrar, idUsuario) => {
+        setBuscar(mostrar)
+        setUsuarioId(idUsuario)
+      }
+
+      const ocultarUsuario = () => {
+        setBuscar(false)
+      }
 
       useEffect(() => {
         const updateUsuario = async (id, usuario) => {
@@ -88,12 +100,29 @@ export function MainBlock() {
           }
         }
 
-        getUsuarios();
-      }, []);
+        const getUsuario = async (id) => {
+          try {
+            const response = await axios.get(`http://localhost:3000/api/usuarios/${id}`, {
+              headers: {
+                authorization: `Bearer ${localStorage.getItem('token')}`
+              }
+            })
+            setUsuarios(response.data)
+          } catch (error) {
+            console.log(error)
+          }
+        }
+
+        if (!buscar) {
+          getUsuarios();
+        } else {
+          getUsuario(usuarioId)
+        }
+      }, [buscar, usuarioId]);
 
       return (
         <div className="main-content-users">
-          <BuscarEmpleado />
+          <BuscarEmpleado onMostrar={(mostrar, idUsuario) => mostrarUsuario(mostrar, idUsuario)}/>
           <div className="main-block">
             <div id="title">
               <h1>Usuarios</h1>
@@ -101,6 +130,8 @@ export function MainBlock() {
             <div className="scrollEmployees">
               {usuarios.map((usuario => (
                 <form onSubmit={(e) => editarUsuario(e, usuario.id)} key={usuario.id}>
+                  { buscar && (
+                  <div className="closeDatosPostulante" onClick={ocultarUsuario}><AiOutlineClose style={{ color: "#1537A6", cursor: "pointer" }}></AiOutlineClose></div>)}
                   <div className="usuario">
                     <div className="row">
                       <div className="col"><h3><CampoDeTexto campoTexto={usuario.nombre} opcionEditar={usuario.editMode} onGuardar={(nuevoTexto) => guardarTexto(usuario.id, nuevoTexto, 'nombre')}></CampoDeTexto></h3></div>
