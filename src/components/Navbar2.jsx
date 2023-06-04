@@ -27,19 +27,18 @@ export function Navbar2() {
           </Link>
         </div>
       );
-    } else if (window.location.pathname === "/administrador/agregar-usuarios"){
-      const path = window.location.pathname.split("/");
-      <div className="container">
-        <Link to="/administrador" className="text1">
-          Administrador ->
-        </Link>
-        <Link to="/trabajaconnosotros" className="text1">
-          Agregar Usuarios ->
-        </Link>
-        <Link to={"/".concat(path)}>{path}</Link>
-      </div>;
-    }
-    else{
+    } else if (window.location.pathname === "/administrador/agregar-usuarios") {
+      return (
+        <div className="container">
+          <Link to="/administrador" className="text1">
+            Administrador ->
+          </Link>
+          <Link to="#" className="text1">
+            Agregar Usuarios ->
+          </Link>
+        </div>
+      );
+    } else {
       return none;
     }
   };
