@@ -1,0 +1,48 @@
+.modal{
+    display: flex;
+    position: absolute;
+    
+    color: white;
+    background-color: rgba(0,0,0,0.8);
+    width: 400px;
+    height: 350px;
+    border-radius: 5%;
+    font-weight: bold;
+    left: 20%;
+    padding: 1%;
+}
+
+.modal-head{
+    display: grid;
+    grid-template-columns: 5fr 1fr;
+    align-items: center;
+    gap: 40%;
+}
+
+#icon-close{
+    font-size: 18px;
+}
+#icon-close:hover{
+    color: dodgerblue;
+}
+
+.modal-container{
+    display: flex;
+    flex-direction: column;
+}
+.modal-container div{
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    align-items: center;
+
+}
+
+.modal-container input{
+    height: 20px;
+}
+#boton1{
+    display: flex;
+    position: absolute;
+    left: 300px;
+    margin-top: 3%;
+}

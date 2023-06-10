@@ -2,11 +2,11 @@ import "../styles/bloqueTitulo.css";
 
 export function BloqueTitulo() {
   return (
-    <div className="blokTitle">
-      <h1 className="blockTitle">
+    <div className="blockTitle">
+      <h1>
         ¡Bienvenido!
       </h1>
-      <hr className="blokTitle" />
+      <hr />
     </div>
   );
 }

@@ -2,38 +2,58 @@ import "../styles/userMenu.css";
 import { Link } from "react-router-dom";
 
 export function UserMenu({ btns }) {
-  const btn1 = btns[0];
-  const btn2 = btns[1];
-
-  const whichMenu = () => {
-    if (window.location.pathname === "/administrador") {
+  const Menu = (btn) => {
+    if (btn === "Usuarios") {
       return (
-        <div className="userBtn">
-          <Link className="userbtn1" to="/administrador/listar-usuarios">
-            {btn1}
-          </Link>
-          <Link className="userbtn1" to="/administrador/agregar-usuarios">
-            {btn2}
-          </Link>
-        </div>
+        <Link
+          key={btn.key}
+          className="userbtn1"
+          to="/administrador/listar-usuarios"
+        >
+          {btn}
+        </Link>
       );
-      // } else if (window.location.pathname === "/") {
-      //   return (
-      //     <div className="userBtn">
-      //       <button className="userbtn1">{btn1}</button>
-      //       <button className="userbtn2">{btn2}</button>
-      //     </div>
-      //   );
-    }
+    } else if (btn === "Agregar usuario")
+      return (
+        <Link
+          key={btn.key}
+          className="userbtn1"
+          to="/administrador/agregar-usuarios"
+        >
+          {btn}
+        </Link>
+      );
+    else if (btn === "Gestión de empleados")
+      return (
+        <Link
+          key={btn.key}
+          className="userbtn1"
+          to="/analista/gestion-de-empleados"
+        >
+          {btn}
+        </Link>
+      );
+    else if (btn === "Gestión de postulantes")
+      return (
+        <Link key={btn.key} className="userbtn1" to="#">
+          {btn}
+        </Link>
+      );
+    else if (btn === "Gestión de vacantes")
+      return (
+        <Link key={btn.key} className="userbtn1" to="#">
+          {btn}
+        </Link>
+      );
   };
 
   return (
     <div className="usermenuContainer">
-      <div id="menu_hr">
+      <div id="menu_h1">
         <h1>Menú</h1>
-        <hr />
       </div>
-      {whichMenu()}
+      <hr id="menu_hr" />
+      <div className="userBtn">{btns.map((btn) => Menu(btn))}</div>
     </div>
   );
 }

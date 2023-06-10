@@ -34,12 +34,29 @@ export function Navbar2() {
             Administrador ->
           </Link>
           <Link to="#" className="text1">
-            Agregar Usuarios ->
+            Agregar Usuarios
           </Link>
         </div>
       );
-    } else {
-      return none;
+    } else if (window.location.pathname === "/analista") {
+      return (
+        <div className="container">
+          <Link to="#" className="text1">
+            Analista
+          </Link>
+        </div>
+      );
+    } else if (window.location.pathname === "/analista/gestion-de-empleados") {
+      return (
+        <div className="container">
+          <Link to="/analista" className="text1">
+            Analista ->
+          </Link>
+          <Link to="#" className="text1">
+            Gestion de empleados
+          </Link>
+        </div>
+      )
     }
   };
 

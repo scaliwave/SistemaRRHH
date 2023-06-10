@@ -10,22 +10,22 @@
     padding-top: 20%;
 
 }
-.verticalgroup{
-    display: flex;
-    flex-direction: column;
+.verticalGroup{
     align-items: center;
-    gap: 5%;
-
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    line-height: 50px;
+    cursor: pointer;
 
 }
 .listIcon{
-    margin-top: 2%;
     width: 20px;
     height: 20px;
 
 }
 .listIcon2{
-    margin-top: 2%;
     width: 25px;
     height: 25px;
 }

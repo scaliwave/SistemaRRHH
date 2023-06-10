@@ -2,7 +2,7 @@ import { useState } from "react";
 import "../styles/buscarEmpleado.css";
 import { Btn1 } from "./Btn1";
 
-export function BuscarEmpleado({onMostrar}) {
+export function BuscarEmpleado({onMostrar, nameTitle}) {
 
   const [id, setId] = useState('')
 
@@ -20,11 +20,11 @@ export function BuscarEmpleado({onMostrar}) {
   return (
     <div className="content-buscar-empleado">
       <div>
-        <h3>Buscar usuario</h3>
+        <h3>Buscar {nameTitle}</h3>
       </div>
       <form onSubmit={mostrar}>
         <div id="content-buscar">
-          <input type="text" placeholder="Input" value={id} onChange={guardarId}/>
+          <input type="text" placeholder="Cédula empleado" value={id} onChange={guardarId}/>
           <Btn1 name="Buscar" size={[100, 30,]} />
         </div>
       </form>

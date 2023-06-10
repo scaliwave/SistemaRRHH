@@ -8,13 +8,15 @@
 }
 .blockTitle h1{
     font-weight: bold;
-    font-size: 40px;
+    font-size: 32px;
     text-align: center;
+    font-family: sans-serif;
 
 }
-.blokTitle hr{
+.blockTitle hr{
     border-color: #E0E0E0;
     border-style: solid;
     border-radius: 20px;
     width: 100%;
+    
 }

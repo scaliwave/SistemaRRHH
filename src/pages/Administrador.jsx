@@ -38,6 +38,7 @@ export function Administrador() {
                 <UserBlock
                   name={"Ligia López"}
                   rol={"Administrador"}
+                  genre="femenino"
                 ></UserBlock>
               </div>
               <div>

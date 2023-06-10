@@ -11,13 +11,15 @@
     min-height: 340px;
 
 }
-#menu_hr h1{
+#menu_h1 h1{
     font-size: 30px;
     font-weight: bold;
     color: #1537A6;
 }
-#menu_hr hr{
+#menu_hr{
+    position: relative;
     border-top: 1px solid #C6C6C6;
+    width: 200px;
 
 }
 
