@@ -26,7 +26,7 @@ export function MainBlock() {
     const [usuarioId, setUsuarioId] = useState("");
 
     const editarUsuario = (e, id) => {
-      e.preventDefapt();
+      e.preventDefault();
       setUsuarios((prevUsuarios) => {
         return prevUsuarios.map((usuario) => {
           if (usuario.id === id) {
@@ -60,7 +60,7 @@ export function MainBlock() {
       setUsuarioId(idUsuario);
     };
 
-    const ocptarUsuario = () => {
+    const ocultarUsuario = () => {
       setBuscar(false);
     };
 
@@ -147,8 +147,8 @@ export function MainBlock() {
               >
                 {buscar && (
                   <div
-                    className="closeDatosPostpante"
-                    onClick={ocptarUsuario}
+                    className="closeDatosPostulante"
+                    onClick={ocultarUsuario}
                   >
                     <AiOutlineClose
                       style={{ color: "#1537A6", cursor: "pointer" }}
@@ -169,7 +169,7 @@ export function MainBlock() {
                       </h3>
                     </div>
                     <div className="col">
-                      <p>
+                      <ul>
                         Usuario: <br />{" "}
                         <CampoDeTexto
                           campoTexto={usuario.usuario}
@@ -178,15 +178,15 @@ export function MainBlock() {
                             guardarTexto(usuario.id, nuevoTexto, "usuario")
                           }
                         ></CampoDeTexto>
-                      </p>
+                      </ul>
                     </div>
                     <div className="col">
-                      <p>Cédpa: {usuario.id}</p>
+                      <ul>Cédula: {usuario.id}</ul>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col">
-                      <p>
+                      <ul>
                         <CampoDeTexto
                           campoTexto={usuario.cargo}
                           opcionEditar={usuario.editMode}
@@ -194,18 +194,18 @@ export function MainBlock() {
                             guardarTexto(usuario.id, nuevoTexto, "cargo")
                           }
                         ></CampoDeTexto>
-                      </p>
+                      </ul>
                     </div>
                     <div className="col">
-                      <p>Contraseña: *******</p>
+                      <ul>Contraseña: *******</ul>
                     </div>
                     <div className="col">
-                      <p>
+                      <ul>
                         <Btn1
                           name={usuario.editMode ? "Guardar" : "Editar usuario"}
                           size={[width, 30]}
                         />
-                      </p>
+                      </ul>
                     </div>
                   </div>
                 </div>
@@ -248,7 +248,7 @@ export function MainBlock() {
           <div id="title">
             <h3>Agregar Usuario</h3>
           </div>
-          <div id="content-add-user">
+          <div id="conent-add-user">
             <div>
               <p>Usuario</p>
               <input
@@ -318,7 +318,7 @@ export function MainBlock() {
                     </p>
                   </div>
                   <div className="col">
-                    <p>Cédpa: {usuario.id}</p>
+                    <p>Cédula: {usuario.id}</p>
                   </div>
                 </div>
                 <div className="row">
@@ -345,7 +345,7 @@ export function MainBlock() {
     const [usuarioId, setUsuarioId] = useState("");
 
     const editarUsuario = (e, id) => {
-      e.preventDefapt();
+      e.preventDefault();
       setUsuarios((prevUsuarios) => {
         return prevUsuarios.map((usuario) => {
           if (usuario.id === id) {
@@ -379,7 +379,7 @@ export function MainBlock() {
       setUsuarioId(idUsuario);
     };
 
-    const ocptarUsuario = () => {
+    const ocultarUsuario = () => {
       setBuscar(false);
     };
 
@@ -466,8 +466,8 @@ export function MainBlock() {
               >
                 {buscar && (
                   <div
-                    className="closeDatosPostpante"
-                    onClick={ocptarUsuario}
+                    className="closeDatosPostulante"
+                    onClick={ocultarUsuario}
                   >
                     <AiOutlineClose
                       style={{ color: "#1537A6", cursor: "pointer" }}
@@ -488,7 +488,7 @@ export function MainBlock() {
                       </h3>
                     </div>
                     <div className="col">
-                      <p>
+                      <ul>
                         Usuario: <br />{" "}
                         <CampoDeTexto
                           campoTexto={usuario.usuario}
@@ -497,15 +497,15 @@ export function MainBlock() {
                             guardarTexto(usuario.id, nuevoTexto, "usuario")
                           }
                         ></CampoDeTexto>
-                      </p>
+                      </ul>
                     </div>
                     <div className="col">
-                      <p>Cédpa: {usuario.id}</p>
+                      <ul>Cédula: {usuario.id}</ul>
                     </div>
                   </div>
                   <div className="row">
                     <div className="col">
-                      <p>
+                      <ul>
                         <CampoDeTexto
                           campoTexto={usuario.cargo}
                           opcionEditar={usuario.editMode}
@@ -513,18 +513,18 @@ export function MainBlock() {
                             guardarTexto(usuario.id, nuevoTexto, "cargo")
                           }
                         ></CampoDeTexto>
-                      </p>
+                      </ul>
                     </div>
                     <div className="col">
-                      <p>Contraseña: *******</p>
+                      <ul>Contraseña: *******</ul>
                     </div>
                     <div className="col">
-                      <p>
+                      <ul>
                         <Btn1
                           name={usuario.editMode ? "Guardar" : "Editar usuario"}
                           size={[width, 30]}
                         />
-                      </p>
+                      </ul>
                     </div>
                   </div>
                 </div>
