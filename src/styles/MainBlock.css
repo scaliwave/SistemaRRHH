@@ -33,7 +33,7 @@
 
 }
 
-.Container-add-user{
+.container-add-user{
     display: flex;
     flex-direction: column;
     padding-left: 1%;
@@ -42,19 +42,20 @@
     border: 1px solid #C6C6C6;
     box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
     width: 400px;
-    height: 500px;
-    margin-top: 4%;
+    height: 530px;
+    margin-top: 2%;
 
 }
 
 #content-add-user{
     display: flex;
     flex-direction: column;
-    width: 100%;
+    font-weight: bold;
 }
+
 #in-add-user{
     background-color: #F4F4F4;
-    height: 22px;
+    height: 22px;;
 }
 
 #btn-add-user{
