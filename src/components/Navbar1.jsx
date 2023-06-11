@@ -38,17 +38,20 @@ export function Navbar1() {
         </div>
       );
     }
-    else {
-      const path = window.location.pathname.split("/");
-      <div className="navbar2">
+    else if(window.location.pathname === "/trabajaconnosotros/test-de-conocimientos"){
+      return (
+        <div className="navbar2">
           <Link to="/" className="navbar">
             Home ->
           </Link>
           <Link to="/trabajaconnosotros" className="navbar">
-            Trabaja con nostros ->
+            Trabaja con nosotros ->
           </Link>
-          <Link to= {"/".concat(path)}>{path}</Link>
+          <Link to="#" className="navbar">
+            Test de conocimientos
+          </Link>
         </div>
+      );
     }
   };
 

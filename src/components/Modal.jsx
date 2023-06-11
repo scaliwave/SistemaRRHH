@@ -23,6 +23,8 @@ export function Modal({ vacante, onClose }) {
     } catch (error) {
       console.log(error)
     }
+
+    return window.location.pathname = "/trabajaconnosotros/test-de-conocimientos"
   };
 
   return (
@@ -36,19 +38,19 @@ export function Modal({ vacante, onClose }) {
         <div className="modal-container">
           <div>
             <ul>Documento de identidad</ul>
-            <input type="text" name="" id="" placeholder="Input Field" value={id} onChange={(e) => setId(e.target.value)}/>
+            <input type="text" name="" id="" placeholder="Input Field" value={id} required onChange={(e) => setId(e.target.value)}/>
           </div>
           <div>
             <ul>Nombre completo</ul>
-            <input type="text" name="" id="" placeholder="Input Field" value={nombre} onChange={(e) => setNombre(e.target.value)}/>
+            <input type="text" name="" id="" placeholder="Input Field" required value={nombre} onChange={(e) => setNombre(e.target.value)}/>
           </div>
           <div>
             <ul>Correo electrónico</ul>{" "}
-            <input type="text" name="" id="" placeholder="Input Field" value={email} onChange={(e) => setEmail(e.target.value)}/>
+            <input type="text" name="" required id="" placeholder="Input Field" value={email} onChange={(e) => setEmail(e.target.value)}/>
           </div>
           <div>
             <ul>Teléfono de contacto</ul>
-            <input type="text" placeholder="Input Field" value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
+            <input type="text" required placeholder="Input Field" value={telefono} onChange={(e) => setTelefono(e.target.value)}/>
           </div>
         </div>
         <div id="boton1">
