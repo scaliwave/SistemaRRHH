@@ -19,7 +19,6 @@ export function Modal({ vacante, onClose }) {
     try {
       const response = await axios.post('http://localhost:3000/api/postulantes', {id, nombre, email, telefono, idVacante});
       console.log(response.data)
-      onClose()
     } catch (error) {
       console.log(error)
     }
