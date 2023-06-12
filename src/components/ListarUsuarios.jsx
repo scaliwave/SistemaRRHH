@@ -138,15 +138,17 @@ export function ListarUsuarios() {
               <div className="usuario">
                 <div className="row">
                   <div className="col">
-                    <h3>
-                      <CampoDeTexto
-                        campoTexto={usuario.nombre}
-                        opcionEditar={usuario.editMode}
-                        onGuardar={(nuevoTexto) =>
-                          guardarTexto(usuario.id, nuevoTexto, "nombre")
-                        }
-                      ></CampoDeTexto>
-                    </h3>
+                    <ul>
+                      <h3>
+                        <CampoDeTexto
+                          campoTexto={usuario.nombre}
+                          opcionEditar={usuario.editMode}
+                          onGuardar={(nuevoTexto) =>
+                            guardarTexto(usuario.id, nuevoTexto, "nombre")
+                          }
+                        ></CampoDeTexto>
+                      </h3>
+                    </ul>
                   </div>
                   <div className="col">
                     <ul>
