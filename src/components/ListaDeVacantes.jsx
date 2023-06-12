@@ -32,7 +32,7 @@ export function ListaDeVacantes() {
       <div className="T-work-whit-us">
         <h2>Trabaja con nosotros</h2>
       </div>
-      <div className="scrollVacantes">
+      <div className="scroll">
         <div id="container">
           {vacantes.map((vacante) => (
             <div className="vacante-container" key={vacante.id}>

@@ -16,6 +16,7 @@ import { AgregarUsuarios } from "./pages/Administrador.AgregarUsuarios";
 import { GestionEmpleados } from "./pages/Analista.GestionEmpleados";
 import { NotFound } from "./pages/NotFound";
 import { TestInicial } from "./pages/TestInicial";
+import { PlantillaDatosPostulante } from "./pages/PlantillaDatosPostulante";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -40,6 +41,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/trabajaconnosotros/test-de-conocimientos"
           Component={TestInicial}
+        />
+        <Route
+          path="/trabajaconnosotros/plantilla-de-registro"
+          Component={PlantillaDatosPostulante}
         />
         <Route path="*" Component={NotFound} />
       </Routes>

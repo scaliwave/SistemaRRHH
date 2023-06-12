@@ -37,8 +37,9 @@ export function Navbar1() {
           </Link>
         </div>
       );
-    }
-    else if(window.location.pathname === "/trabajaconnosotros/test-de-conocimientos"){
+    } else if (
+      window.location.pathname === "/trabajaconnosotros/test-de-conocimientos"
+    ) {
       return (
         <div className="navbar2">
           <Link to="/" className="navbar">
@@ -49,6 +50,22 @@ export function Navbar1() {
           </Link>
           <Link to="#" className="navbar">
             Test de conocimientos
+          </Link>
+        </div>
+      );
+    } else if (
+      window.location.pathname === "/trabajaconnosotros/plantilla-de-registro"
+    ) {
+      return (
+        <div className="navbar2">
+          <Link to="/" className="navbar">
+            Home ->
+          </Link>
+          <Link to="/trabajaconnosotros" className="navbar">
+            Trabaja con nosotros ->
+          </Link>
+          <Link to="#" className="navbar">
+            Plantilla de registro
           </Link>
         </div>
       );

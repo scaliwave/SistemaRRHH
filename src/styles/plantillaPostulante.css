@@ -1,0 +1,53 @@
+.MainContent-plantilla{
+    display: grid;
+    grid-template-rows: 1fr 1fr;
+    gap: 5%;
+}
+
+.containerRow-plantilla{
+    display: flex;
+    flex-direction: column;
+    padding-left: 1%;
+    padding-right: 1%;
+    background-color:rgb(217, 235, 251);
+
+}
+/*titulo del bloque*/
+#row1-plantilla{
+    display: flex;
+    height: 50px;
+}
+
+#row2-plantilla{
+    display: inline-flex;
+    padding: 5px;
+    gap: 1%;
+    align-items: center;
+    
+}
+
+#row2-plantilla label{
+    display: grid;
+    font-weight: bold;
+    font-family: sans-serif;
+    font-size: 13.2px;
+}
+
+#row2-plantilla input{
+    align-items: center;
+    width: 50%;
+    height: 18px;
+    border: 1px gray solid;
+    border-radius: 5px;
+
+}
+
+#containerCheckbox{
+    display:flex;
+    width: 80px;
+}
+
+#checkbox-plantilla{
+    display: flex;
+    align-items: center;
+}
