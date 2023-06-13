@@ -38,9 +38,9 @@ export function Analista() {
             <div className="adminC2_1">
               <div>
                 <UserBlock
-                  name={"Rodrigo Pérez"}
-                  rol={"Analista RRHH"}
-                  genre="masculino"
+                  name={analista.nombre}
+                  rol={analista.cargo}
+                  genre="femenino"
                 ></UserBlock>
               </div>
               <div>
