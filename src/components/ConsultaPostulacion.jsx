@@ -15,13 +15,18 @@ export function ConsultaPostulacion() {
     setIdPostulante(e.target.value)
   }
 
+  const plantillaRegistro = (e) => {
+    e.preventDefault()
+    localStorage.setItem('postulante', postulante.id)
+    window.location.href = "/trabajaconnosotros/plantilla-de-registro"
+  }
+
   const mostrarDatos = async (e) => {
     e.preventDefault();
     if (idPostulante.trim() !== '') {
       try {
         const response = await axios.get(`http://localhost:3000/api/postulantes/${idPostulante}`);
         setPostulante(response.data);
-        console.log(response.data)
       } catch (error) {
         console.log(error)
       }
@@ -33,7 +38,7 @@ export function ConsultaPostulacion() {
   const ocultarRespuesta = () => {
     setMostrarRespuesta(false)
   }
-  
+
   return (
     <div className="consulta-postulacion">
       <div className="container-consulta">
@@ -50,29 +55,36 @@ export function ConsultaPostulacion() {
       </div>
       {mostrarRespuesta && postulacion && idPostulante.trim() !== '' && (
         <div className="container-respuesta">
-          <div className="closeDatosPostulante" onClick={ocultarRespuesta}><AiOutlineClose style={{ color: "#1537A6", cursor: "pointer" }}></AiOutlineClose></div>
-          <div className="content-fields">
-            <div id="text-field">
-              <h3>Documento de identidad: </h3>
-              <p>{postulante.id}</p>
-            </div>
-            <div id="text-field">
-              <h3>Nombre completo: </h3>
-              <p>{postulante.nombre}</p>
-            </div>
-            <div id="text-field">
-              <h3>Cargo al que aspira: </h3>
-              <p>{postulante.cargo}</p>
-            </div>
-            <div id="text-field">
-              <h3>Estado de postulacion:</h3>
-              <p>{postulante.estado}</p>
-            </div>
-          </div>
+          <form onSubmit={plantillaRegistro}>
+            <div>
+              <div className="closeDatosPostulante" onClick={ocultarRespuesta}><AiOutlineClose style={{ color: "#1537A6", cursor: "pointer" }}></AiOutlineClose></div>
+              <div className="content-fields">
+                <div id="text-field">
+                  <h3>Documento de identidad: </h3>
+                  <p>{postulante.id}</p>
+                </div>
+                <div id="text-field">
+                  <h3>Nombre completo: </h3>
+                  <p>{postulante.nombre}</p>
+                </div>
+                <div id="text-field">
+                  <h3>Cargo al que aspira: </h3>
+                  <p>{postulante.cargo}</p>
+                </div>
+                <div id="text-field">
+                  <h3>Estado de postulacion:</h3>
+                  <p>{postulante.estado}</p>
+                </div>
+              </div>
 
-          <div className="btn-adjDocuments">
-            <Btn1 name="Adjuntar documentos" size={[140, 25]} />
-          </div>
+
+              <div className="btn-adjDocuments">
+                {postulante.estado === "Postulado" && (
+                  <Btn1 name="Información personal" size={[140, 25]} />
+                )}
+              </div>
+            </div>
+          </form>
         </div>
       )}
     </div>
