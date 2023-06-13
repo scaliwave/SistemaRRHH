@@ -9,22 +9,24 @@ import { UserMenu } from "../components/UserMenu";
 import { useEffect, useState } from "react";
 
 export function Analista() {
-  // const [authenticated, setAuthenticated] = useState(false);
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
+  const [authenticated, setAuthenticated] = useState(false);
+  const [analista, setAnalista] = useState([])
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
 
-  //   if (!token) {
-  //     window.location.href = "/";
-  //   } else {
-  //     setAuthenticated(true);
-  //   }
-  // }, []);
-  const name = "Ligia López";
-  const rol = "Administrador";
+    if (!token) {
+      window.location.href = "/";
+    } else {
+      setAnalista(JSON.parse(localStorage.getItem("analista")))
+      setAuthenticated(true);
+    }
+  }, []);
+
   return (
     <div>
-      {/* {authenticated && ( */}
+      {authenticated && (
       <div className="background2">
         <Navbar2></Navbar2>
         <div className="adminContainer">
@@ -48,7 +50,7 @@ export function Analista() {
           </div>
         </div>
       </div>
-      {/* )} */}
+      )}
     </div>
   );
 }

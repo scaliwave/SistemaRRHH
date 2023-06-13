@@ -9,22 +9,23 @@ import { UserMenu } from "../components/UserMenu";
 import { useEffect, useState } from "react";
 
 export function Administrador() {
-  // const [authenticated, setAuthenticated] = useState(false);
+  const [authenticated, setAuthenticated] = useState(false);
+  const [admin, setAdmin] = useState([])
+  
+  useEffect(() => {
+    const token = localStorage.getItem("token");
 
-  // useEffect(() => {
-  //   const token = localStorage.getItem("token");
-
-  //   if (!token) {
-  //     window.location.href = "/";
-  //   } else {
-  //     setAuthenticated(true);
-  //   }
-  // }, []);
-  const name = "Ligia López";
-  const rol = "Administrador";
+    if (!token) {
+      window.location.href = "/";
+    } else {
+      setAdmin(JSON.parse(localStorage.getItem("administrador")))
+      setAuthenticated(true);
+    }
+  }, []);
+  
   return (
     <div>
-      {/* {authenticated && ( */}
+      {authenticated && (
       <div className="background2">
         <Navbar2></Navbar2>
         <div className="adminContainer">
@@ -36,9 +37,9 @@ export function Administrador() {
             <div className="adminC2_1">
               <div>
                 <UserBlock
-                  name={"Ligia López"}
-                  rol={"Administrador"}
-                  genre="femenino"
+                  name={admin.nombre}
+                  rol={admin.cargo}
+                  genre="masculino"
                 ></UserBlock>
               </div>
               <div>
@@ -48,7 +49,7 @@ export function Administrador() {
           </div>
         </div>
       </div>
-      {/* )} */}
+       )}
     </div>
   );
 }

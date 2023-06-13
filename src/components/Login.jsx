@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "../styles/login.css";
 import axios from "axios";
 
@@ -6,21 +6,46 @@ export function Login() {
 
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
+  const [usuario, setUsuario] = useState('')
+  const [cargo, setCargo] = useState('')
+  const [consulta, setConsulta] = useState(false)
+
+  useEffect(() => {
+    const redirect = () => {
+      if (cargo === "Administrador") {
+        localStorage.setItem('administrador', usuario)
+        window.location.href = "/administrador"
+      } else {
+        localStorage.setItem('analista', usuario)
+        window.location.href = "/analista"
+      }
+    }
+
+    if (consulta) {
+      redirect()
+    } else {
+      localStorage.removeItem('token')
+      localStorage.removeItem("administrador")
+      localStorage.removeItem("analista")
+    }
+  }, [usuario, cargo, consulta]);
 
   const usuarioAccess = async (e) => {
     e.preventDefault();
 
     try {
-      const response = await axios.post('http://localhost:3000/api/login', {username, password});
+      const response = await axios.post('http://localhost:3000/api/login', { username, password });
 
       if (response.data.success) {
         localStorage.setItem('token', response.data.token)
-        window.location.href = "/administrador"
+        setUsuario(JSON.stringify(response.data.results[0]))
+        setCargo(response.data.results[0].cargo)
+        setConsulta(true)
       } else {
         setUsername('')
         setPassword('')
       }
-      
+
     } catch (error) {
       window.location.href = "/"
       console.error("Error al iniciar sesion:", error)
@@ -41,7 +66,7 @@ export function Login() {
               className="form-control"
               id="exampleInputEmail1"
               placeholder="Enter your email address"
-              required 
+              required
               value={username}
               onChange={(e) => setUsername(e.target.value)}
             />
@@ -49,7 +74,7 @@ export function Login() {
           </div>
           <div className="passLogin">
             <label className="form-label">Contraseña</label>
-            <input type="password" className="form-control" placeholder="Enter your password" required value={password} onChange={(e) => setPassword(e.target.value)}/>
+            <input type="password" className="form-control" placeholder="Enter your password" required value={password} onChange={(e) => setPassword(e.target.value)} />
           </div>
           <button type="submit" className="botonLogin">
             Log In

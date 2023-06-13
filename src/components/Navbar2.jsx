@@ -5,6 +5,8 @@ import "../styles/navbar2.css";
 export function Navbar2() {
   const logout = (e) => {
     localStorage.removeItem("token");
+    localStorage.removeItem("administrador")
+    localStorage.removeItem("analista")
   };
 
   const letter = () => {
