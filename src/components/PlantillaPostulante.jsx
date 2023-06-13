@@ -46,6 +46,7 @@ export function PlantillaPostulante() {
     try {
       const response = await axios.post("http://localhost:3000/api/empleado", empleado)
       console.log(response)
+      window.location.href = "/"
     } catch (error) {
       console.log(error)
     }

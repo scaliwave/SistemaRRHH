@@ -22,6 +22,11 @@ export function AgregarUsuarios() {
         },
       });
       setUsuarioRegistrado(response.data)
+      setId('')
+      setNombre('')
+      setCargo('')
+      setUsuario('')
+      setContraseña('')
     } catch (error) {
       console.log(error);
     }
