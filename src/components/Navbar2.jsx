@@ -58,6 +58,18 @@ export function Navbar2() {
         </div>
       )
     }
+    else if (window.location.pathname === "/analista/gestion-de-vacantes"){
+      return (
+        <div className="container">
+          <Link to="/analista" className="text1">
+            Analista ->
+          </Link>
+          <Link to="#" className="text1">
+            Gestion de vacantes
+          </Link>
+        </div>
+      )
+    }
   };
 
   return (

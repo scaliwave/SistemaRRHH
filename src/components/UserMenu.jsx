@@ -35,13 +35,13 @@ export function UserMenu({ btns }) {
       );
     else if (btn === "Gestión de postulantes")
       return (
-        <Link key={btn.key} className="userbtn1" to="#">
+        <Link key={btn.key} className="userbtn1" to="gestion-de-postulantes">
           {btn}
         </Link>
       );
     else if (btn === "Gestión de vacantes")
       return (
-        <Link key={btn.key} className="userbtn1" to="#">
+        <Link key={btn.key} className="userbtn1" to="gestion-de-vacantes">
           {btn}
         </Link>
       );

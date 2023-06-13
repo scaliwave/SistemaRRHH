@@ -78,6 +78,7 @@
 
 #img-vacante{
     display: flex;
+    flex-direction: row;
     width: 80px;
     height: 80px;
 

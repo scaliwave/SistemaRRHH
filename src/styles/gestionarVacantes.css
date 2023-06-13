@@ -1,0 +1,67 @@
+.block_gestionarVacantes{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: white;
+    border-radius: 8px ;
+    width: 800px;
+    height:470px;
+    border: 1px solid #393837;
+    padding: 1%;
+    
+}
+.vacante-container-{
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 2%;
+    align-items: center;
+    background-color: #F4F4F4;
+    padding: 2%;
+}
+
+#content-vacante-{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#editCampo{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 2%;
+}
+
+#editImg-vacante{
+    display: flex;
+    flex-direction: column;
+    width: 135px;
+    
+}
+
+.menu-gestion-vacantes{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4%;
+    gap: 70%;
+    align-items: center;
+}
+
+.btn-gestion-vacantes{
+    padding: 5%;
+    align-items: center;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    background-color: #1537A6;
+    color: white;
+    border-radius: 10px;
+    border: 1px solid #1537A6;
+    box-shadow: 0 2px 8px 0 rgba(0, 0, 0, 0.5);
+    font-size: medium;
+    width: 180px;
+}
+
+.btn-gestion-vacantes:hover{
+    background-color: black;
+}
+

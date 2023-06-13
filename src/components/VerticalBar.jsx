@@ -4,6 +4,7 @@ import { FaUserAlt, FaUserPlus, FaUserFriends } from "react-icons/fa";
 
 export function VerticalBar() {
   const user = () => {
+    //barra vertical de administrador
     if (
       window.location.pathname === "/administrador" ||
       window.location.pathname === "/administrador/listar-usuarios" ||
@@ -36,7 +37,8 @@ export function VerticalBar() {
           </div>
         </div>
       );
-    else if (window.location.pathname === "/analista" || window.location.pathname === "/analista/gestion-de-empleados")
+      // barra vertical de analista
+    else if (window.location.pathname === "/analista" || window.location.pathname === "/analista/gestion-de-empleados" || window.location.pathname === "/analista/gestion-de-vacantes")
       return (
         <div className="vertical">
           <div className="verticalGroup">
@@ -62,7 +64,7 @@ export function VerticalBar() {
               </Link>
             </div>
             <div>
-              <Link to="#">
+              <Link to="/analista/gestion-de-vacantes">
                 <img
                   src="/recruitment.png"
                   className="listIcon2"
