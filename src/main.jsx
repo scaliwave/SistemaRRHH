@@ -19,6 +19,7 @@ import { TestInicial } from "./pages/TestInicial";
 import { PlantillaDatosPostulante } from "./pages/PlantillaDatosPostulante";
 import { GestionVacantes } from "./pages/Analista.GestionVacantes";
 import { GestionPostulantes } from "./pages/Analista.GestionPostulantes";
+import { PrevisualizarVacantes } from "./pages/PrevisualizarVacantes";
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
@@ -47,6 +48,10 @@ ReactDOM.createRoot(document.getElementById("root")).render(
         <Route
           path="/analista/gestion-de-postulantes"
           Component={GestionPostulantes}
+        />
+        <Route
+          path="/analista/previsualizar-vacantes"
+          Component={PrevisualizarVacantes}
         />
         <Route
           path="/trabajaconnosotros/test-de-conocimientos"

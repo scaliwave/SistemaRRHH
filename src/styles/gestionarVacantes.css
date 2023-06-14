@@ -17,12 +17,14 @@
     align-items: center;
     background-color: #F4F4F4;
     padding: 2%;
+    height: 300px;
 }
 
 #content-vacante-{
     display: flex;
     flex-direction: column;
     justify-content: center;
+    height: 200px;
 
 }
 #editCampo{
