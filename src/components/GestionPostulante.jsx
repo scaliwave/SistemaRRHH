@@ -2,9 +2,9 @@ import { useState, useEffect } from "react";
 import { Btn1 } from "./Btn1";
 import axios from "axios";
 import { AiOutlineClose } from "react-icons/ai";
-import { BuscarEmpleado } from "./BuscarEmpleado";
+import "../styles/gestionPostulante.css"
 
-export function GestionEmpleados() {
+export function GestionPostulante() {
   const [usuarios, setUsuarios] = useState([]);
 
   const [buscar, setBuscar] = useState(false);
@@ -25,25 +25,7 @@ export function GestionEmpleados() {
     });
   };
 
-  const guardarTexto = (id, nuevoTexto, campo) => {
-    setUsuarios((prevUsuarios) => {
-      return prevUsuarios.map((usuario) => {
-        if (usuario.id === id) {
-          const updatedUsuario = {
-            ...usuario,
-            [campo]: nuevoTexto,
-          };
-          return updatedUsuario;
-        }
-        return usuario;
-      });
-    });
-  };
-
-  const mostrarUsuario = (mostrar, idUsuario) => {
-    setBuscar(mostrar);
-    setUsuarioId(idUsuario);
-  };
+ 
 
   const ocultarUsuario = () => {
     setBuscar(false);
@@ -112,70 +94,59 @@ export function GestionEmpleados() {
   }, [buscar, usuarioId]);
 
   return (
-    <div className="main-content-users">
-      <BuscarEmpleado
-        onMostrar={(mostrar, idUsuario) => mostrarUsuario(mostrar, idUsuario)}
-        nameTitle="Empleado"
-      />
-      <div className="main-block">
+    <div className="main-content-postulantes">
+      <div className="main-block-postulantes">
         <div id="title">
-          <h1>Empleados</h1>
+          <h1>Postulantes</h1>
         </div>
         <div className="scrollEmployees">
-          {usuarios.map((usuario) => (
-            <form
-              onSubmit={(e) => editarUsuario(e, usuario.id)}
-              key={usuario.id}
-            >
-              {buscar && (
-                <div className="closeDatosPostulante" onClick={ocultarUsuario}>
-                  <AiOutlineClose
-                    style={{ color: "#1537A6", cursor: "pointer" }}
-                  ></AiOutlineClose>
-                </div>
-              )}
-              <div className="usuario">
+          {usuarios.map((usuario) =>(            
+              <div className="usuario" key={usuario.key}>
                 <div className="row">
                   <div className="col">
-                    <h3>
-                      {usuario.nombre}
-                    </h3>
+                    <h3>{usuario.nombre}</h3>
                   </div>
                   <div className="col">
                     <ul>
-                      Edad: <br/>
+                      Edad: <br />
                       {usuario.edad}
                     </ul>
                   </div>
                   <div className="col">
                     <ul>Cédula: {usuario.id}</ul>
                   </div>
+                  <div className="col">
+                    <ul>
+                      <form >
+                        <label>Estado</label>
+                        <select name="Estado" id="">
+                          <option value="">Postulado</option>
+                          <option value="">Hoja de vida vista</option>
+                          <option value="">En proceso</option>
+                          <option value="">Finalista</option>
+                          <option value="">Proceso finalizado</option>
+                        </select>
+                      </form>
+                    </ul>
+                  </div>
                 </div>
                 <div className="row">
                   <div className="col">
-                    <ul>
-                      {usuario.cargo}
-                    </ul>
-                  </div>
-                  <div className="col">
-                    <ul><Btn1
-                        name="Hoja de vida"
-                        size={[110, 30]}/></ul>
-                  </div>
-                  <div className="col">
-                    <ul><Btn1
-                        name="Añadir novedad"
-                        size={[110, 30]}/></ul>
+                    <ul>{usuario.cargo}</ul>
                   </div>
                   <div className="col">
                     <ul>
-                      <Btn1
-                        name="Afiliar" size={[110,30]}/>
+                      <Btn1 name="Hoja de vida" size={[110, 30]} />
                     </ul>
+                  </div>
+                  <div className="col">
+                    <ul></ul>
+                  </div>
+                  <div className="col">
+                    <ul></ul>
                   </div>
                 </div>
               </div>
-            </form>
           ))}
         </div>
       </div>

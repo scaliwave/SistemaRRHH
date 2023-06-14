@@ -119,7 +119,7 @@ export function GestionVacantes() {
           <div className="scroll">
             <div id="container">
               {vacantes.map((vacante, index) => (
-                <form onSubmit={(e) => editarVacante(e, vacante.id)}>
+                <form key={vacante.id} onSubmit={(e) => editarVacante(e, vacante.id)}>
                   <div className="vacante-container-" key={vacante.id}>
                     <div id="content-vacante-">
                       <div id="editCampo">

@@ -6,7 +6,7 @@ export function Footer() {
   return (
     <>
       <div className="footer">
-        <div>
+        <div >
           <ChatBot />
         </div>
         <div className="texto1">

@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import "../styles/verticalBar.css";
-import { FaUserAlt, FaUserPlus, FaUserFriends } from "react-icons/fa";
+import { FaUserAlt, FaUserPlus, FaUserFriends,FaUserEdit } from "react-icons/fa";
 
 export function VerticalBar() {
   const user = () => {
@@ -14,7 +14,7 @@ export function VerticalBar() {
         <div className="vertical">
           <div className="verticalGroup">
             <div>
-              <Link to="#">
+              <Link to="/administrador">
                 <img src="/list.png" className="listIcon" />
               </Link>
             </div>
@@ -38,12 +38,12 @@ export function VerticalBar() {
         </div>
       );
       // barra vertical de analista
-    else if (window.location.pathname === "/analista" || window.location.pathname === "/analista/gestion-de-empleados" || window.location.pathname === "/analista/gestion-de-vacantes")
+    else if (window.location.pathname === "/analista" || window.location.pathname === "/analista/gestion-de-empleados" || window.location.pathname === "/analista/gestion-de-vacantes" || window.location.pathname === "/analista/gestion-de-postulantes")
       return (
         <div className="vertical">
           <div className="verticalGroup">
             <div>
-              <Link to="#">
+              <Link to="/analista">
                 <img src="/list.png" className="listIcon" />
               </Link>
             </div>
@@ -56,11 +56,11 @@ export function VerticalBar() {
               </Link>
             </div>
             <div>
-              <Link to="#">
-                <FaUserPlus
+              <Link to="/analista/gestion-de-postulantes">
+                <FaUserEdit
                   className="listIcon2"
                   style={{ color: "black" }}
-                ></FaUserPlus>
+                ></FaUserEdit>
               </Link>
             </div>
             <div>

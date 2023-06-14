@@ -5,6 +5,7 @@ import { ListarUsuarios } from "./ListarUsuarios";
 import { AgregarUsuarios } from "./AgregarUsuarios";
 import { GestionEmpleados } from "./GestionEmpleados";
 import { GestionVacantes } from "./GestionVacantes";
+import { GestionPostulante } from "./GestionPostulante";
 
 export function MainBlock() {
   //screen 1 listar usuarios
@@ -22,5 +23,9 @@ export function MainBlock() {
   //screen 4 gestion de vacantes
   else if (window.location.pathname === "/analista/gestion-de-vacantes") {
     return <GestionVacantes />;
+  }
+  //screen 5 gestion de postulantes
+  else if (window.location.pathname === "/analista/gestion-de-postulantes") {
+    return <GestionPostulante />;
   }
 }

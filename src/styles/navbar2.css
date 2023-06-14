@@ -4,6 +4,8 @@
     align-items: center;
     display: flex;
     flex-direction: row;
+    padding-top: 1%;
+    padding-bottom: 1%;
 
 }
 

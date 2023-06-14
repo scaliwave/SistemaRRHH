@@ -72,13 +72,25 @@ export function Navbar2() {
         </div>
       )
     }
+    else if (window.location.pathname === "/analista/gestion-de-postulantes"){
+      return (
+        <div className="container">
+          <Link to="/analista" className="text1">
+            Analista ->
+          </Link>
+          <Link to="#" className="text1">
+            Gestion de postulantes
+          </Link>
+        </div>
+      )
+    }
   };
 
   return (
     <div className="navbarGroup">
       <div className="container">
         {letter()}
-        <p className="userNavbar">user</p>
+        <p className="userNavbar"></p>
         <Link to="/" onClick={logout}>
           <img src="/exit.png" className="exit" />
         </Link>
