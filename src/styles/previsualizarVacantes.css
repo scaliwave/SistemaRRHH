@@ -1,0 +1,24 @@
+.container-previsualizar{
+    position: absolute;
+    left: 28%;
+    top: 25%;
+}
+
+.title-previsualizar{
+    display: flex;
+    position: absolute;
+    flex-direction: column;
+    background-color: rgba(0,0,0,0.6);
+    border-radius: 20px ;
+    color: white ;
+    text-align: center;
+    top: 10%;
+    width: 90%;
+    left: 7%;
+}
+#btn-volver-previsualizar{
+    position: absolute;
+    left: 110%;
+    bottom: 2%;
+    background-color: black;
+}

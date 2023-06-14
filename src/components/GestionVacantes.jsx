@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 import axios from "axios";
 
 import "../styles/gestionarVacantes.css";
@@ -10,7 +11,7 @@ export function GestionVacantes() {
   const [vacantes, setVacantes] = useState([]);
   const [width, setWidth] = useState(120);
   const [editableNombre, setEditableNombre] = useState(false);
-  const [editableDescripcion, setEditableDescripcion] = useState(false)
+  const [editableDescripcion, setEditableDescripcion] = useState(false);
   const [editingIndex, setEditingIndex] = useState(-1);
 
   const editarVacante = (e, id) => {
@@ -29,25 +30,25 @@ export function GestionVacantes() {
   };
 
   const editarNombre = (index) => {
-    setEditableNombre(true)
-    setEditingIndex(index)
-  }
+    setEditableNombre(true);
+    setEditingIndex(index);
+  };
 
   const editarDescripcion = (index) => {
-    setEditableDescripcion(true)
-    setEditingIndex(index)
-  }
+    setEditableDescripcion(true);
+    setEditingIndex(index);
+  };
 
   const guardarNombre = () => {
-    setEditableNombre(false)
+    setEditableNombre(false);
   };
 
   const guardarDescripcion = () => {
-    setEditableDescripcion(false)
-  }
+    setEditableDescripcion(false);
+  };
 
   useEffect(() => {
-    const updateVacante = async(id, vacante) => {
+    const updateVacante = async (id, vacante) => {
       try {
         const response = await axios.put(
           `http://localhost:3000/api/vacantes/${id}`,
@@ -59,7 +60,7 @@ export function GestionVacantes() {
           }
         );
       } catch (error) {
-        console.log(error)
+        console.log(error);
       }
     };
 
@@ -119,7 +120,10 @@ export function GestionVacantes() {
           <div className="scroll">
             <div id="container">
               {vacantes.map((vacante, index) => (
-                <form key={vacante.id} onSubmit={(e) => editarVacante(e, vacante.id)}>
+                <form
+                  key={vacante.id}
+                  onSubmit={(e) => editarVacante(e, vacante.id)}
+                >
                   <div className="vacante-container-" key={vacante.id}>
                     <div id="content-vacante-">
                       <div id="editCampo">
@@ -130,26 +134,46 @@ export function GestionVacantes() {
                               value={vacante.nombre}
                               onChange={(e) => handleNombreChange(e, index)}
                             />
-                            <div className="editar"><BiSave onClick={guardarNombre}></BiSave></div>
+                            <div className="editar">
+                              <BiSave onClick={guardarNombre}></BiSave>
+                            </div>
                           </div>
                         ) : (
                           <h3>{vacante.nombre}</h3>
                         )}
-                        {vacante.editMode && !editableNombre && (<div className="editar"><BiEditAlt onClick={()=> {editarNombre(index)}} /></div>)}
+                        {vacante.editMode && !editableNombre && (
+                          <div className="editar">
+                            <BiEditAlt
+                              onClick={() => {
+                                editarNombre(index);
+                              }}
+                            />
+                          </div>
+                        )}
                       </div>
                       <div id="editCampo">
                         {editableDescripcion && editingIndex === index ? (
                           <div>
                             <textarea
                               value={vacante.descripcion}
-                              onChange={(e) => handleDescripcionChange(e, index)}
+                              onChange={(e) =>
+                                handleDescripcionChange(e, index)
+                              }
                             />
-                            <div className="editar"><BiSave onClick={guardarDescripcion}></BiSave></div>
+                            <div className="editar">
+                              <BiSave onClick={guardarDescripcion}></BiSave>
+                            </div>
                           </div>
                         ) : (
                           <p>{vacante.descripcion}</p>
                         )}
-                        {vacante.editMode && !editableDescripcion && (<div className="editar"><BiEditAlt onClick={() => editarDescripcion(index)} /></div>)}
+                        {vacante.editMode && !editableDescripcion && (
+                          <div className="editar">
+                            <BiEditAlt
+                              onClick={() => editarDescripcion(index)}
+                            />
+                          </div>
+                        )}
                       </div>
                     </div>
                     <div id="editImg-vacante">
@@ -180,7 +204,9 @@ export function GestionVacantes() {
       </div>
       <div className="menu-gestion-vacantes">
         <div>
-          <button className="btn-gestion-vacantes">Previsualizar</button>
+          <Link to="/analista/previsualizar-vacantes">
+            <button className="btn-gestion-vacantes">Previsualizar</button>
+          </Link>
         </div>
       </div>
     </div>

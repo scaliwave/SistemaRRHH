@@ -38,7 +38,7 @@ export function VerticalBar() {
         </div>
       );
       // barra vertical de analista
-    else if (window.location.pathname === "/analista" || window.location.pathname === "/analista/gestion-de-empleados" || window.location.pathname === "/analista/gestion-de-vacantes" || window.location.pathname === "/analista/gestion-de-postulantes")
+    else if (window.location.pathname === "/analista" || window.location.pathname === "/analista/gestion-de-empleados" || window.location.pathname === "/analista/gestion-de-vacantes" || window.location.pathname === "/analista/gestion-de-postulantes" || window.location.pathname === "/analista/previsualizar-vacantes")
       return (
         <div className="vertical">
           <div className="verticalGroup">
