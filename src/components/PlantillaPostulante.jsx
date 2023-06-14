@@ -6,7 +6,7 @@ import axios from "axios";
 export function PlantillaPostulante() {
 
   const idPostulante = localStorage.getItem("postulante")
-  const [empleado, setEmpleado] = useState([])
+  const cargo = localStorage.getItem("cargo")
   const [id, setId] = useState('')
   const [nombre, setNombre] = useState('')
   const [tipoId, setTipoId] = useState('')
@@ -22,9 +22,8 @@ export function PlantillaPostulante() {
 
   const registrarEmpleado = (e) => {
     e.preventDefault()
-    setEmpleado(() => {
-      return {
-        id: id,
+    const empleadoActualizado = {
+      id: id,
         nombre: nombre,
         tipoId: tipoId,
         edad: edad,
@@ -35,15 +34,16 @@ export function PlantillaPostulante() {
         direccionResidencia: direccionResidencia,
         email: email,
         entidadEps: entidadEps,
-        entidadPension: entidadPension
-      }
-    })
-
-    enviarInformacion(empleado)
+        entidadPension: entidadPension,
+        cargo: cargo,
+    }
+    
+    enviarInformacion(empleadoActualizado)
   }
 
   const enviarInformacion = async (empleado) => {
     try {
+      console.log(empleado)
       const response = await axios.post("http://localhost:3000/api/empleado", empleado)
       console.log(response)
       window.location.href = "/"

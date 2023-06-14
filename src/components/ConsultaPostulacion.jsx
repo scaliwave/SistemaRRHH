@@ -18,6 +18,7 @@ export function ConsultaPostulacion() {
   const plantillaRegistro = (e) => {
     e.preventDefault()
     localStorage.setItem('postulante', postulante.id)
+    localStorage.setItem("cargo", postulante.cargo)
     window.location.href = "/trabajaconnosotros/plantilla-de-registro"
   }
 
@@ -77,12 +78,12 @@ export function ConsultaPostulacion() {
                 </div>
               </div>
 
-
-              <div className="btn-adjDocuments">
-                {postulante.estado === "Postulado" && (
+              {postulante.estado === "Finalista" && (
+                <div className="btn-adjDocuments">
+                  <h4>Para completar el proceso de selección de clic en el botón</h4>
                   <Btn1 name="Información personal" size={[140, 25]} />
-                )}
-              </div>
+                </div>
+              )}
             </div>
           </form>
         </div>

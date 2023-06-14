@@ -77,7 +77,7 @@ export function GestionEmpleados() {
   useEffect(() => {
     const getUsuarios = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/usuarios", {
+        const response = await axios.get("http://localhost:3000/api/empleados", {
           headers: {
             authorization: `Bearer ${localStorage.getItem("token")}`,
           },
@@ -137,9 +137,9 @@ export function GestionEmpleados() {
               <div className="usuario">
                 <div className="row">
                   <div className="col">
-                    <h3>
+                    <ul><h3>
                       {usuario.nombre}
-                    </h3>
+                    </h3></ul>
                   </div>
                   <div className="col">
                     <ul>
@@ -158,9 +158,7 @@ export function GestionEmpleados() {
                     </ul>
                   </div>
                   <div className="col">
-                    <ul><Btn1
-                        name="Hoja de vida"
-                        size={[110, 30]}/></ul>
+
                   </div>
                   <div className="col">
                     <ul><Btn1
