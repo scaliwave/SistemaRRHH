@@ -91,7 +91,7 @@ export function GestionEmpleados() {
     const getUsuario = async (id) => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/usuarios/${id}`,
+          `http://localhost:3000/api/empleados/${id}`,
           {
             headers: {
               authorization: `Bearer ${localStorage.getItem("token")}`,
